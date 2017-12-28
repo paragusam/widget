@@ -8,6 +8,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="//fonts.googleapis.com/css?family=Snippet" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <script>
+        $(document).ready(function(){
+            $("#content").click(function(){
+                $("#hideshow").slideToggle();
+            });
+        });
+    </script>
 </head>
 <body>
 <div class="row header">
@@ -26,7 +33,7 @@
         <div class="col-md-12">
             <div class="tabbable-panel">
                 <div class="tabbable-line">
-                    <ul class="nav nav-tabs ">
+                    <ul class="nav nav-tabs">
                         <li class="active">
                             <a href="#tab_default_1" data-toggle="tab">Calculate</a>
                         </li>
@@ -40,41 +47,125 @@
                     <div class="row tab-content">
                         <div class="tab-content">
                         <div class="tab-pane active" id="tab_default_1">
-                            <p>I'm in Tab 1.</p>
-                            <p>
-                                Duis autem eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
-                            </p>
-                            <p>
-                                <a class="btn btn-success" href="http://j.mp/metronictheme" target="_blank">
-                                    Learn more...
-                                </a>
-                            </p>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <span class="input-group-addon" id="basic-addon2">TOKEN</span>
+                            </div>
+                            <div class="input-group input-group-currency" style="margin: 3% 0;"><div class="input-group-addon uppercase" style="color:#00cf70;">you get</div>
+                                <input type="text" name="amount" class="form-control" value="" placeholder="">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default dropdown-toggle uppercase dropdown-toggle-big"><b>ETH</b>
+                                        <span class="glyphicon glyphicon-chevron-down" id='content'></span></button>
+                            </div>
+                            </div>
+                            <div class="box__wrapper" id="hideshow">
+                            <div class="search__wrapper"><span class="glyphicon glyphicon-search" style="position: absolute;padding: 12px 85%;color: #ccc;"></span>
+                                <input type="text" value="" class="search__input" placeholder="Search"></div>
+                            <div class="row item__wrapper" style="height:30px;">
+                                <div class="col-xs-4 coin_short text-right uppercase">XMR</div><div class="col-xs-2 icon__wrapper">
+                                <img class="glyphicon coin_icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAMAAABFjsb+AAAAD1BMVEX///8zt2wzt2wzt2wzt2yQKqO7AAAABHRSTlMAEKDQh2Gr1wAAAD9JREFUeNq9yDESACAIA0GD/P/NXoGAM7ZKk2PHi7NLuiV5GhhUBgZ1A6HDJmhMN/FBKqNAiNpCgVB0rpT94RbLvAEhJJhCfgAAAABJRU5ErkJggg==" alt="xmr"></div>
+                                <div class="col-xs-6 coin_full">Monero</div>
+                            </div>
+
+                            <div class="row item__wrapper" style="height:30px;">
+                                <div class="col-xs-4 coin_short text-right uppercase">ZEC</div><div class="col-xs-2 icon__wrapper">
+                                <img class="glyphicon coin_icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAH/SURBVHjadNRdaM9RGAfwz/+//xR5mZmXpnaxkkKStPKW5XU3him0lBbDDYpkuXBhF26k1MKK5EIpDHkplHCBYpolSsz7NLKoxbwUN8+/Tn9z6tc55/t7zvc5z/N8n5Mp6WhSMIZgDWpRhRH4g8+4hzacxe/0UK6AZD4OYkrsf+EJigKrwCrcxRa0D0S0FscDe4gWPMLk8P4Us7AVM3EjSK9CJkKrxjUUYx92B/k4fEA/BgdWHE424ivm4HEucnKkgGRphFkah7M4HIQ3sSnsG3AI1TnUY2LEuycOrsS6JOxB2BzrUlzAdizCXCzOYXkYtCSVuIi+WP/EapTHvivmL2hFM+oyJR1NPSjBJLzw76jH0cjRddQlTqpCEt05DMc7vBmApAYnopKdoa++5H8XvmFkNoAiZApIpuFkkLyPvPUW2GTz57LxczwqE4PKUG8pPobKnw9w4wlR9Z5sxJjDwsRgb0Lcj53RGm1oTOxqY76UxenYbAt2GJsYV0RuVsQ3L/ByrI/1mVx4eYAZ0WeN2I/LoexdcavmSOz9yGkrRoVUbudbZHoodhiORUN+Rxk+4QeGhs7KgqQO3ZiNV5nkGVmCU6Gp16GdOxgdlemNntwQ2NsItT1t2vyYigNYkGA9QTQmwc5hB17+7z3qjOrVYFnM+cZ9his4j1uFOvg7AOQJeEZ3zsjnAAAAAElFTkSuQmCC" alt="xmr"></div>
+                                <div class="col-xs-6 coin_full">Zcash</div>
+                            </div>
+
+                            <div class="row item__wrapper" style="height:30px;">
+                                <div class="col-xs-4 coin_short text-right uppercase">Dash</div><div class="col-xs-2 icon__wrapper">
+                                <img class="glyphicon coin_icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAABBVBMVEX///8zt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2zADreCAAAAVnRSTlMAAQMFBwkLDQ8TFBkeHyAhIiUoLC8wMjM0PD0/QEFCRkpMTk9UWWNlaWp0eH1/goeOk5aYmpudnqmqrLS1t7u+v8HCzM7X2tvd4OTt7/Hy9vf4+vz9/ig2rEkAAACxSURBVHgBdcgDWkRhGIDRL9s1nmtl27br3f9S+pXrPD7yr9bRenX4WxQnT3B/mHxM7y7Oapud9gM+rNia5otIlK4ruI6bnuf54SJHLao84LxRL5fKgzL0+jSkKoft+YXVF5iTDGqqJnms9/WlwLhsQ1NVwsvp5tbO3t6a9NyqVzXwQCFG5zpcdIiyyfH+gbJ/BsyKNnLDh9NuMYI7nMsxcSoHoDxv9Mun2szy0tSE/OcN0Cwu1cNBHt0AAAAASUVORK5CYII=" alt="xmr"></div>
+                                <div class="col-xs-6 coin_full">Dash</div>
+                            </div>
+
+                            <div class="row item__wrapper" style="height:30px;">
+                                <div class="col-xs-4 coin_short text-right uppercase">XRP</div><div class="col-xs-2 icon__wrapper">
+                                <img class="glyphicon coin_icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAA5FBMVEUwtmwwtmwwtmwwtmwwtmwwtmwwtmxMaXEwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmwwtmzarjHxAAAAS3RSTlMCrcXAcwQGABYXWWeHLKl9fGoQTRs8DDUOaGsIPrRSvqR6QXlttXeGua64EkrKlr92f6OAcJjQ/pyhq/1x3HRVg4jVP8iK+/D6X+UBGVddAAAAr0lEQVQYGWXBVZbCQAAAwQYCncHXfVl3d3fP/e+zmXn8UYUjyEMeBRoh5AkOza06hCCwsFLJJRIEsTXYXTcBFF1c2j7dW5aSgGilenJ+vGMJERmfr7Wzl4vuVlCJnKqeXX3dP14eNlVKOnl0XUS1NUVAZ56y76L4eX04UEFwttXvvP29/2bTKon0PrXf3lcSxdDtNW87AnVBAZ8/7jbqGCGoeLPZEEFJxIkxJRJH/ANnIRGQ5VlifQAAAABJRU5ErkJggg==" alt="xmr"></div>
+                                <div class="col-xs-6 coin_full">Ripple</div>
+                            </div>
+
+                            <div class="row item__wrapper" style="height:30px;">
+                                <div class="col-xs-4 coin_short text-right uppercase">ETC</div><div class="col-xs-2 icon__wrapper">
+                                <img class="glyphicon coin_icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAAMFBMVEX///8zt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2wzt2y/aJrpAAAAD3RSTlMAECAwQFBgcICgsMDQ4PDg5yR0AAAAXElEQVR4AX3PAxJAMRAD0P1GkfuftrYyyrwtaZjjDMmElG/rCPLwJAvjnvbXzq/XjW5vJwBG9Fr6K9rsMlERMZhkkj3ZKjt6EA4w9bf9FciPQP/U5Yf+nXL2nVbR9b8I2RbkTtgAAAAASUVORK5CYII=" alt="xmr"></div>
+                            <div class="col-xs-6 coin_full">EtherClassic</div>
+                            </div>
+
+                            <div class="row item__wrapper" style="height:30px;">
+                                <div class="col-xs-4 coin_short text-right uppercase">LTC</div><div class="col-xs-2 icon__wrapper">
+                                <img class="glyphicon coin_icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAMAAABFjsb+AAAAM1BMVEX///8O2nwO2nwO2nwO2nwO2nwO2nwO2nwO2nwO2nwO2nwO2nwO2nwO2nwO2nwO2nwO2nzpEJQ/AAAAEHRSTlMAECAwQFBgcICQoLDA0ODwVOCoyAAAAKRJREFUeAF1zGnaWBEMQGFXgnCDs//V9jG0/cbzi5ck3B5VlfAxdVbTnn/UGDnKo40p/6joC8ym3Q8ZOXOaeoafWTc1HGbcVogTZo7FgXebewKw/Mpauoe72bJUKeugy+ax2HIcf81rWXseUANkWRsCwySlp8MIq4Q6UM0nYGHXh6zbAPBwEro4u1ryxcxQre4mlR5u0hnV7N3r/pWaM7zE8Ft/AOHYCmJsgcoVAAAAAElFTkSuQmCC" alt="xmr"></div>
+                                <div class="col-xs-6 coin_full">Litecoin</div>
+                            </div>
+
+                            <div class="row item__wrapper" style="height:30px;">
+                                <div class="col-xs-4 coin_short text-right uppercase">DOGE</div><div class="col-xs-2 icon__wrapper">
+                                <img class="glyphicon coin_icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAABAlBMVEVMaXFV/6oazIAPw3EPwnEQwnEPw3APwnEPw3EPw3APwnARxHEQwnIQwnETxXMPwnARxHIPw3ERwnIQw3ASxXQPw3EPw3BA/4AQwnAQw3EQwnERwnEPwnEQwnEPw3APwnIPwnEQw3EPw3EXxXQRxHEQw3AQwnERxHIRw3ERxnEQxXMQw3APwnAQw3IUxHYQwnEPw3EQw3IQw3IPw3APxHAWyHoRzHcPw3EQw3EPw3EQw3EPw3ARwnQPw3ERwnGA/4ARw3IQw3ETxnMQw3EQw3ARw3EPxHEQxHMQw3EQwnAk25ISyIAPw3EQw3AQw3EQx3gRw3APxHAQw3EPwnIQw3IPwnAUq+osAAAAVXRSTlMAAwqH686Y+6emuD2b9DX4Z6Vp9TnH/gTzwLBYybTcQ+ez/RZoz/BKTS0f0dZeDeb5L3L6lhcP2bJEjOou7ooCiZwo5KGahVKQsQcO7eGuIGtkvGVikOAMQQAAALtJREFUGBlVwQdbQQEYhuEX5zhlUzQ0jZZKizSsiooG1fP//0ofLtJ9a+rF67SIaOzzZ/idSA0cnurcHmnki3npZemZ/7ywusnkolkwoThmTfMOl4BVjXy4rvsgswnsyMSAx6bMBrAuEwEaMnkPyEo6jQL3MgFga0VSASjJ7Ocgsy1TBC4kne8BQZkY4FXkD5wBu36ZNnCduCpjgj6ZfpSp4wONpZi4DJ34NPH6Hse5o1bVn94bYYcbzfwCNYExCsAgIJYAAAAASUVORK5CYII=" alt="xmr"></div>
+                                <div class="col-xs-6 coin_full">Dodecoin</div>
+                            </div>
+
+                            <div class="row item__wrapper" style="height:30px;">
+                                <div class="col-xs-4 coin_short text-right uppercase">BCH</div><div class="col-xs-2 icon__wrapper">
+                                <img class="glyphicon coin_icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAABm1BMVEX///8nlFgwtWxJv343uXFEvXo2uHAnk1dOwYEnk1c3uXE5uXJJv34lilJJv35QwYIurmd4z59dxox90aM2uHAmj1U7unNbxYtjyJBLv39GvnwnlFg7unNQwYIyt25ry5ZoypRry5Yqnl5Jv35RwoROwYEnlFg8unVMwIBEvXosqGRIvn1OwYFix4+n4MFDvXlGvnxGvnw/u3ep4cIolllIvn1ZxYlMwICA0qUvtGuA0qWI1auN165DvXlMwIA7unM8unUvsmpQwYJDvXlWw4c5uXI3uXEmj1U3uXFexo1yzZs8unVOwYGN166Z27Zty5curmcjhU9BvHii3r2n4MGI1auP168wtWyH1aq758+86NAusGgvsWkvsmo2uHByzZuR2LG+6NHs+PEecUMge0kigk0jhlAlilImklYomVspmlstq2Yurmcvsmo2uHA7unNDvXlLv39MwIBOwYFRwoRWw4dqypVvzJhzzpyN166f3bup4cLB6dPL7drf9Ojo9+/q+PDt+fLv+fPw+vX0+/f5/fr6/fz9/v7///8uG1+jAAAAY3RSTlMABAQEBQ0ODxYcHB4zNTg7PD1NUVlbXWZqcHSAg4eKi4ySm52gprW4uL2/wMDAxMXFyszNzs7Oz9HS09PT1dXX2d/h4+Pk6Onq6uvv7/Dw8vP09fX1+Pj5+vr7/Pz8/f3+/v4dApcCAAAAuklEQVR4AWMgBTDzqGsJsCCLcEgZ2EYHyHEjRPhVzWUlHWPy7MVYoSISivLiQgo+Hg5B+SpQIWddQWG9qJpgO8P4UKiQUZymcWNLY3OIV4I1VEjbzbuqoaOjtS6swgIqpO9qFlnf1tGS5FdhBRXScbGM6Ghq70j0r7SBCjmFB6aW1dZX58aW+0KFlNIzUpPTCnOyiwqUoULsoiZZqSm5xSWmImxw53NKu2eWespwIXuSkVdNg4+JlIACAHBqKbi8PCvtAAAAAElFTkSuQmCC" alt="xmr"></div>
+                                <div class="col-xs-6 coin_full">BitcoinCash</div>
+                            </div>
+
+                            <div class="row item__wrapper" style="height:30px;">
+                                <div class="col-xs-4 coin_short text-right uppercase">BTG</div><div class="col-xs-2 icon__wrapper">
+                                <img class="glyphicon coin_icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAOWSURBVHjadJNbaNZlHMc/z/P8D+9p023Od21jy3kqq2mI0xUhdFNK3QSCKFEToqCwgs5EVBdJURcR0kURiNWV4UXYYZJSmGVLc7mlrZpD2nS+O77be/r/n0M3ObZc37sHfnz4/r7f3yOcc2w901m9VLRsVhVuzdQk20JR1ZyQ2fpqj9rStC+n8p6ZNmaiosdzFVP6u5AvDFYCe07nh3/qfbB7BsADWJvZ0t2caNtcsiW0NWhXweGIXUzJOiJjCaRHGNTgySxBtcKTCQbDCz8CnXOgxnBF07Se5M9iH0p4WCxlW0ZK3NR0KpoYV6GnLEmVQCCwWFozq6hJLm/mX3kAxulYO40UCgcIPO6p2UZn9SaRbl7mXy5McHSkh29GTuFLgUKinUY6GV8DSebJOENCpnmp5Xn2Nj2KwdKX73dKSN7c+Aj7Nj6OEB7WWf4rb/4jcjFPNuxhTXIlzwy+wkC5303mAj01Eag7suvZv+Up9t68k32/fngdaM6RdjFtiTXcvbST/SMfcL54joxKUeWlqfZT/HD1NK/3HmBX21aa0zdgrF7cUWw1t2fWMaUr9Bb6SKvU3FDZRPjSp3v4JPm4QsVUyPip/1/NFx4VF6OdQSBwOIQQdCxbRzrwia2mEE/OlbIoSAnJH6UhGvwMKxItXCj2kxQhSng8cdMuGtJLSKmAjK947vRBfhn/jYTyFmYkENIXAf3Fc/xeGuLh7G5SsoqSLTIbz9J14lW6TrzBcHEMYF5rQi5wFLty3hMKh+Hd4fd57cYXeW/VOxye+JxBm5M1Nc10rb6XyBpKWuNJhRIO6+KZBaCh0sDxtlT7bYEIGI6GeHbwZXbW7+CBuvtFUJf2Z6MCR0d+5uBfX/P2pqeJjKYh3cilXN9X10DCOcf2nltWdNR39UyYfN2l8gASSeQ0VV7alSaro9FxExbNLAnlE8iQlqpWUjK8enrkePuZHYdH5zLKTZ+/ePzKJ49l/axuDFuxWJIygSZiVucxNibtJTDOUJ+sZ1lYF307+vGeMf3l6IKwz+ZDBsbOHjqV++ihhrCttDq1HoPGOYcSCofFOEt7bTtN6cbCsaFDu67YviNXU3Zha0qALxVlPfPp92Nf3IeJ+zYsuZNaf7mIbOQtT2bpyHagTaX3u8vd2yp28jMPH+nE4gcphcK5+NjJs0fuqk+ufGFD+6bdVbVrg8IM5d6LPQdyhaG3EnWZWSnUdX/tnwEAYfiXvZjf/YQAAAAASUVORK5CYII=" alt="xmr"></div>
+                                <div class="col-xs-6 coin_full">BitcoinGold</div>
+                            </div>
+
+                            <div class="row item__wrapper" style="height:30px;">
+                                <div class="col-xs-4 coin_short text-right uppercase">DGB</div><div class="col-xs-2 icon__wrapper">
+                                <img class="glyphicon coin_icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAABdFBMVEX////Q/+fq//T///+I/8FIxoR39bMBQB8BXS1IxoR597UBMxmA/rxq6KYBXC1T0Y+h/86Q/8V39bMpp2UamFY4tnQzsW8MikgSkE4BLxcBMhkCgD5Ny4kBLxcBVyoysG4WlFLQ/+fZ/+vh//Cm/9EioF6I/8EBYC9e3Jp597UBZzJW1JIYllQBMBgBNRoBUSgBNhsBQyEBVCkBOx0BOBxFw4FGxIJLyYcBMhkBMxkBNRoBNhsBPR4BPh8BQB8BQSABQyEBRCIBSCMBSyUBWSsBYjABZTEBZzIBaDMBajMBbTUBcDYBdTkBezwCgD4DgT8Fg0EGhEIHhUMIhkQJh0UOjEoPjUsRj00SkE4Vk1EWlFIbmVccmlgdm1kgnlwhn10komArqWcurGovrWsysG4zsW82tHI5t3U8ung/vXtAvnxEwoBFw4FHxYNLyYdNy4lOzIpRz41W1JJa2JZb2Zdt66lx761y8K5z8a+k/9Cv/9Xh//BiL9omAAAAOHRSTlMAAgICAwQEBQYHBwsODxMUFBotLkRISVpbXmV3eX2BhIufoKaoqau0vb3CzNTb3uDh7O3u8Pv9/kDgN/wAAAC7SURBVHgBXciDkgNBAADROdu2bV+WsW3bxsY/n1JGXep6ADYFqKYvriZJWbwd9i8ncFl56EmD7vUMkrWnSjwp1bPHiM5SZb+71mn97UDasziCsWy76NmFtJV2BgLhnNW7CWnhJ24uNEKR/AaAPTuc1WYi87uO6D4aCpRdqRuAOnIZND5P6RzJ9ptFp9ba7J/7kB4FpcqkNyrED0h3HCvycp5l3iHNH76yMvb/+2QJoOYOXr5OVwHZ7PL4RgFSI6a563WSAAAAAElFTkSuQmCC" alt="xmr"></div>
+                                <div class="col-xs-6 coin_full">DigiBite</div>
+                            </div>
+
+                            <div class="row item__wrapper" style="height:30px;">
+                                <div class="col-xs-4 coin_short text-right uppercase">EXP</div><div class="col-xs-2 icon__wrapper">
+                                <img class="glyphicon coin_icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAGSSURBVHjarNM/SJZRFAbw3/f6iQ2GmkNFEIWUm/YHggbBoaG/uEniFBGB0NIkDY0FQUUNDg2RDkZgkWv/IIowIshREMIhGoos0EIt3pbzyeXl/b4ieuDlXs4957nPe89zKu3vRhXQiiEMYi8y5FjCY9zF07RgsfeyrEByAq9wC4fQiQ5swnacxhPcw5a0sJrsBzGBllDwAg8xi3b04Rh2Re4+HMTnlOgoxoNkFufxrKD2AS5gJNab+Joq2ohr2ID3OIKPyvEDVzGFhfQgw0l0Yw2nGpCkWCgGsugQvMZz/4gq9sR+qk7OVhxuwLGCySoqEXhbJ7EHtxsQrRaJOuskfseXkngejVqu/doy2tCP6ZKCmfBOERW8webaYz9KXN1cUrAWiorf/nD7rxrRnZDZhXN/2aQWXEFTzS5ZtPx+JFzC8T+QNOMGepOa9aEdwXzcNB1Du7NExQBe4mzExmK01mftUyiZwAGcwXCQf4sLt2FHQjyWPkU6/XPRuYvh9g7sTlT/xCI+4HrRW5U8z/0P/B4AhzBWQd3NhXkAAAAASUVORK5CYII=" alt="xmr"></div>
+                                <div class="col-xs-6 coin_full">Expance</div>
+                            </div>
+
+                            <div class="row item__wrapper" style="height:30px;">
+                                <div class="col-xs-4 coin_short text-right uppercase">GAME</div><div class="col-xs-2 icon__wrapper">
+                                <img class="glyphicon coin_icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAByFBMVEVMaXEQ0HgQ0HgN0XgQ0HgQ0HgQ0HgQ0HgQ0HgQ0HgM03gP0XgQ0HgQ0HgO0XgQ0HgQ0HgQ0HgQ0HgQ0HgQ0HgQ0HgQ0HgQ0HgQ0HgQ0HgQ0HgQ0HgQ0HgQ0HgQ0HgP0XgQ0HgQ0HgP0HgQ0HgO0XgP0HgMz3YQ0HgQ0HgQ0HgQ0HgQ0HgQ0HgN0ngQ0HgL1XkN0ngQ0HgQ0HgP0HgQ0HgOz3cNz3YLz3UQ0HgQ0HgQ0Hj///8P0HcEznENz3YFznIP0HgO0HcBzXBp4aoJznQKz3WD5rgHznMMz3UNz3cX0XwJz3Qh04Gc6sYY0X0GznKl7Mvs+/S48NaH57sz1owDznFc3qNW3Z8Lz3UN0HZ85bU014wR0HkAymfQ9eQKz3T5/vwCzXAi04Jz468R0Hh85LXb9+pw4q5Y3qEb0n4p1Ybq+vPX9uh75LTk+fCu7tA72JC579YDzXES0Hkk1IP4/fqh7Mrv+/WG5rpo4an+/v7M9OGV6cNx4q76/fv0/Pik7Mum7cz1/Pl047HN9OJs4qw82JAa0n5D2ZTd9+u68NjK8+B55bNJ25gf04AAy2iZ6sXf+O2/8tt45LNF2pVD2pUAy2nN8+KvRRx4AAAAOnRSTlMAZPM56Ovq7bzsRwnN7yi3ATkCQ53SjSjWwz+obg9ROwbZSM5b+/nELb1LoYIg1C4ZLEGir+Df+5vQx8zsPwAAAQRJREFUGBk1wQN7w2AUBtC7rZxt2+b7hU0127Ztd7b1d5cnTc8hTWFRqdHUUF9JPvkF4GRZ5iRUl5Am0QrOLQiC28Vv1ZSRKs4MYXHz+Prv6dOjbNeWE0VaAHGD6fbsVURRgCQq7PH2++f+nZ3v1FVQNCTH+v7R5cPHy9vr2e6So5hiwI3Mr7GTq+e731O2MiNbyAgMjs+xg8ObrwvGFB4GsgL24QmmWZ52SbBSPNDbx8Zmnc7VhSmeA/IoCbB1s6FRm22SH4AqllKB9i7Wz8MngtKzhLZO1tMMXVg4UVpuS0drUyO8QkJJlZ0jihy8/ANJk5kBXXAA6VKSE0xms8HiF0Sqfzl9SVCltjfVAAAAAElFTkSuQmCC" alt="xmr"></div>
+                                <div class="col-xs-6 coin_full">Gamecredit</div>
+                            </div>
+                            </div>
+                    <div class="">
+                        <button class="button"><span>Contribute</span></button>
+                    </div>
                         </div>
                         <div class="tab-pane" id="tab_default_2">
-                            <p>
-                                Howdy, I'm in Tab 2.
-                            </p>
-                            <p>
-                                Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.
-                            </p>
-                            <p>
-                                <a class="btn btn-warning" href="http://j.mp/metronictheme" target="_blank">
-                                    Click for more features...
-                                </a>
-                            </p>
-                        </div>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter The Your Address" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <span class="input-group-addon" id="">TOKEN</span>
+                            </div>
+                            <div class="input-group input-group-currency" style="margin: 3% 0;">
+                                <input type="text" name="amount" class="form-control" value="" placeholder="Enter The Name">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default dropdown-toggle uppercase dropdown-toggle-big"><b>ETH</b>
+                                        <span class="glyphicon glyphicon-chevron-down"></span></button>
+                                </div>
+                            </div>
+                                <button class="button"><span>Next</span></button>
+
+                            </div>
+
                         <div class="tab-pane" id="tab_default_3">
-                            <p>
-                                Howdy, I'm in Tab 3.
-                            </p>
-                            <p>
-                                Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat
-                            </p>
-                            <p>
-                                <a class="btn btn-info" href="http://j.mp/metronictheme" target="_blank">
-                                    Learn more...
-                                </a>
-                            </p>
+                            <div class="col-sm-12" style="margin-left: -7%;">
+                                <div class="col-sm-6">
+                                    <ol class="provide">
+                                        <li>Send The BTC to the provide Address:</li>
+                                        <li>Wait few minutes for blockchain conformation and exachage</li>
+                                        <li>Recevide exetemated<b>values</b>to address</li>
+                                    </ol>
+                                </div>
+                                <div class="col-sm-6 qr-img">
+                                    <img src="assets/images/QR_code.png" ALT="">
+                                </div>
+                            </div>
                         </div>
                     </div>
                     </div>
