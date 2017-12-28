@@ -10,8 +10,10 @@
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     <script>
         $(document).ready(function(){
+		 $("#hideshow").hide();
             $("#content").click(function(){
                 $("#hideshow").slideToggle();
+                $("a.my-tool-tip").tooltip();
             });
         });
     </script>
@@ -43,21 +45,27 @@
                         <li>
                             <a href="#tab_default_3" data-toggle="tab">Payment</a>
                         </li>
+                        <li>
+                            <a href="#tab_default_4" data-toggle="tab">Statu</a>
+                        </li>
                     </ul>
                     <div class="row tab-content">
                         <div class="tab-content">
                         <div class="tab-pane active" id="tab_default_1">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                <span class="input-group-addon" id="basic-addon2">TOKEN</span>
+                            <div class="implement">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <span class="input-group-addon" id="basic-addon2">TOKEN</span>
+                                </div>
+                                <div class="input-group input-group-currency" style="margin: 3% 0;"><div class="input-group-addon uppercase" style="color:#00cf70;">you get</div>
+                                    <input type="text" name="amount" class="form-control" value="" placeholder="">
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-default dropdown-toggle uppercase dropdown-toggle-big"><b>ETH</b>
+                                            <span class="glyphicon glyphicon-chevron-down" id='content'></span></button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="input-group input-group-currency" style="margin: 3% 0;"><div class="input-group-addon uppercase" style="color:#00cf70;">you get</div>
-                                <input type="text" name="amount" class="form-control" value="" placeholder="">
-                                <div class="input-group-btn">
-                                    <button type="button" class="btn btn-default dropdown-toggle uppercase dropdown-toggle-big"><b>ETH</b>
-                                        <span class="glyphicon glyphicon-chevron-down" id='content'></span></button>
-                            </div>
-                            </div>
+
                             <div class="box__wrapper" id="hideshow">
                             <div class="search__wrapper"><span class="glyphicon glyphicon-search" style="position: absolute;padding: 12px 85%;color: #ccc;"></span>
                                 <input type="text" value="" class="search__input" placeholder="Search"></div>
@@ -138,35 +146,44 @@
                     </div>
                         </div>
                         <div class="tab-pane" id="tab_default_2">
+                            <div class="implement">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Enter The Your Address" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                <span class="input-group-addon" id="">TOKEN</span>
+                                <input type="text" class="form-control" placeholder="Enter The Ether Address" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <span class="input-group-addon" id="">ETHER<a class="top" title="" data-placement="top" data-toggle="tooltip" href="#" data-original-title="Tooltip on top"><span class="glyphicon glyphicon-chevron-down" id='content'></a></span>
                             </div>
                             <div class="input-group input-group-currency" style="margin: 3% 0;">
-                                <input type="text" name="amount" class="form-control" value="" placeholder="Enter The Name">
+                                <input type="text" name="amount" class="form-control" value="" placeholder="Enter The your Email Address">
                                 <div class="input-group-btn">
-                                    <button type="button" class="btn btn-default dropdown-toggle uppercase dropdown-toggle-big"><b>ETH</b>
-                                        <span class="glyphicon glyphicon-chevron-down"></span></button>
+                                    <button type="button" class="btn btn-default dropdown-toggle uppercase dropdown-toggle-big"><b>EMAIL</b>
+                                      </button>
                                 </div>
                             </div>
+                        </div>
                                 <button class="button"><span>Next</span></button>
 
                             </div>
 
                         <div class="tab-pane" id="tab_default_3">
-                            <div class="col-sm-12" style="margin-left: -7%;">
-                                <div class="col-sm-6">
+                            <div class="col-sm-12 tab-provide">
+                                <div class="col-sm-6 provide1">
                                     <ol class="provide">
                                         <li>Send The BTC to the provide Address:</li>
                                         <li>Wait few minutes for blockchain conformation and exachage</li>
-                                        <li>Recevide exetemated<b>values</b>to address</li>
+                                        <li>Recevide exetemated<b>20.2125264747754</b>to address</li>
                                     </ol>
+                                    <h3>For Support Please Contact:aequalis@gmail.com</h3>
                                 </div>
                                 <div class="col-sm-6 qr-img">
-                                    <img src="assets/images/QR_code.png" ALT="">
-                                </div>
+                                    <h3>Invoice No:<b></b></h3>
+                                    <img src="assets/images/QR_code.png" ALT=""><br>
+                                <button type="button" class="btn btn-success">Copied Address</button>
+								<h5>Transaction status@Waiting for payment</h5>
                             </div>
                         </div>
+                        </div>
+                            <div class="tab-pane" id="tab_default_4">
+                         <h1>Thank You</h1>
+                            </div>
                     </div>
                     </div>
 
