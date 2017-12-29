@@ -170,6 +170,46 @@ body{
     position: relative;
     transition: 0.5s;
 }
+.list-unstyled li{
+    padding: 8px 12px !important;
+    line-height: 10px !important;
+}
+#img1{
+    margin: 0 12%;
+}
+#img2{
+    margin: 0 15%;
+}
+#img3{
+    margin: 0 9%;
+}
+#img4{
+     margin: 0 15%;
+ }
+#img5{
+      margin: 0 15%;
+  }
+#img6{
+       margin: 0 15%;
+   }
+#img7{
+        margin: 0 8%;
+}
+#img8{
+    margin: 0 15%;
+}
+#img9{
+    margin: 0 15%;
+}
+#img10{
+    margin: 0 15%;
+}
+#img11{
+     margin: 0 18%;
+ }
+#img12{
+    margin: 0 11%;
+}
 
 .button span:after {
     content: '\00bb';
@@ -198,12 +238,16 @@ body{
     line-height: 24px;
 }
 .qr-img img{
-    width: 19%;
-}
+    width: 19%;}
 .provide1 h3{
     font-size: 14px;
     line-height: 58px;
 }
+   #hideshow {
+    margin: 0 83%;
+    height: 220px;
+    overflow-y: scroll;
+   }
 #hideshow::-webkit-scrollbar-track
 {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
