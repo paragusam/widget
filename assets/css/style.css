@@ -7,6 +7,9 @@ body{
     overflow-x: hidden;
     font-family: 'Snippet', sans-serif;
 }
+.main-row{
+    width: 83%;
+}
 .header{
     background-color: #00796B;
     color: #fff;
@@ -15,10 +18,6 @@ body{
     font-size: 16px;
     font-weight: bold;
 }
-.container{
-    text-align: center;
-}
-/* Tabs panel */
 .tabbable-panel {
     border:0px solid #eee;
     padding: 10px;
@@ -68,12 +67,11 @@ body{
     color: #404040;
 }
 .tabbable-line > .tab-content {
-    /* margin-top: -3px; */
     background-color: rgba(204, 204, 204, 0.27);
     border: 0;
     border-top: 1px solid #ccc;
     padding: 10px;
-    height: 555px;
+    height: 350px;
 }
 .portlet .tabbable-line > .tab-content {
     padding-bottom: 0;
@@ -155,15 +153,20 @@ body{
     color: #FFFFFF;
     text-align: center;
     font-size: 20px;
-    padding: 9px;
+    padding: 8px;
     width: 150px;
     transition: all 0.5s;
     cursor: pointer;
-    margin: 5px;
+    margin: 1px 13px;
+}
+label{
+    color: #00796b;
+    padding: 12px 0;
 }
 .implement{
-    width: 67%;
-    margin: 0 2%;}
+    width: 71%;
+    margin: 1% 13%;
+}
 .button span {
     cursor: pointer;
     display: inline-block;
@@ -174,43 +177,6 @@ body{
     padding: 8px 12px !important;
     line-height: 10px !important;
 }
-#img1{
-    margin: 0 12%;
-}
-#img2{
-    margin: 0 15%;
-}
-#img3{
-    margin: 0 9%;
-}
-#img4{
-     margin: 0 15%;
- }
-#img5{
-      margin: 0 15%;
-  }
-#img6{
-       margin: 0 15%;
-   }
-#img7{
-        margin: 0 8%;
-}
-#img8{
-    margin: 0 15%;
-}
-#img9{
-    margin: 0 15%;
-}
-#img10{
-    margin: 0 15%;
-}
-#img11{
-     margin: 0 18%;
- }
-#img12{
-    margin: 0 11%;
-}
-
 .button span:after {
     content: '\00bb';
     position: absolute;
@@ -237,15 +203,21 @@ body{
     margin-top: 4%;
     line-height: 24px;
 }
-.qr-img img{
-    width: 19%;}
-.provide1 h3{
-    font-size: 14px;
-    line-height: 58px;
+.invoice{
+    text-align: left;
+    font-size: 13px;
 }
-   #hideshow {
+.qr-img img{
+    width: 61%;
+    text-align: center;
+}
+.provide1 h3{
+    font-size: 11px;
+    line-height: 48px;
+}
+#hideshow {
     margin: 0 58%;
-    height: 220px;
+    height:  161px;
     overflow-y: scroll;
    }
 #hideshow::-webkit-scrollbar-track
@@ -263,4 +235,14 @@ body{
 #hideshow::-webkit-scrollbar-thumb
 {
     background-color: #000000;
+}
+.note-content{
+    margin: 12%;
+}
+.note-content h5{
+    color: #00796b;
+}
+.contribute-btn{
+    float: right;
+    margin: 2% 0;
 }

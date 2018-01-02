@@ -23,12 +23,15 @@ $(document).ready(function(){
 		var name=$(this).text();
 		//alert(name);
 		$('#content').text(name);
+        $(".coin_short").click(function(){
+            $("#hideshow").hide();
+        });
     });
 });
 </script>
 </head>
 <body>
-<div class="row header">
+<div class="row header  main-row">
     <div class="container">
         <div class="col-sm-12">
             <div class="col-sm-6">
@@ -40,16 +43,16 @@ $(document).ready(function(){
         </div>
     </div>
 </div>
-    <div class="row">
+    <div class="row main-row">
         <div class="col-md-12">
             <div class="tabbable-panel">
                 <div class="tabbable-line">
                     <ul class="nav nav-tabs">
                         <li class="active">
-                            <a href="#tab_default_1" data-toggle="tab">Calculate</a>
+                            <a href="#tab_default_1" data-toggle="tab">Count Up</a>
                         </li>
                         <li>
-                            <a href="#tab_default_2" data-toggle="tab">Recipient info</a>
+                            <a href="#tab_default_2" data-toggle="tab">Contributor Info</a>
                         </li>
                         <li>
                             <a href="#tab_default_3" data-toggle="tab">Payment</a>
@@ -62,18 +65,24 @@ $(document).ready(function(){
                         <div class="tab-content">
                         <div class="tab-pane active" id="tab_default_1">
 						<div class="implement">
+                            <label for="">
+                                No of tokens to contribute:</label>
+
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <input type="text" class="form-control" placeholder="No of tokens" aria-label="Recipient's username" aria-describedby="basic-addon2">
                                 <span class="input-group-addon" id="basic-addon2">TOKEN</span>
                             </div>
-                            <div class="input-group input-group-currency" style="margin: 3% 0;"><div class="input-group-addon uppercase" style="color:#00cf70;">you get</div>
+                            <label for="">Contribute with:</label>
+                            <div class="input-group input-group-currency"><div class="input-group-addon uppercase" style="color:#00cf70;">you get</div>
                                 <input type="text" name="amount" class="form-control" value="" placeholder="">
                                 <div class="input-group-btn">
                                     <button type="button" class="btn btn-default dropdown-toggle uppercase dropdown-toggle-big" id='content'><b>ETH</b>
-                                        <span class="glyphicon glyphicon-chevron-down" ></span></button>
+                                        <span class="glyphicon glyphicon-chevron-down" style="color:#00796b"></span></button>
                             </div>
                             </div>
-							</div>
+                            <button class="button contribute-btn"><span>Contribute</span></button>
+
+                        </div>
                             <div class="box__wrapper" id="hideshow">
                             <div class="search__wrapper"><span class="glyphicon glyphicon-search" style="position: absolute;padding: 12px 85%;color: #ccc;"></span>
                                 <input type="text" value="" class="search__input" placeholder="Search"></div>
@@ -149,55 +158,72 @@ $(document).ready(function(){
                                 <div class="col-xs-6 coin_full">Gamecredit</div>
                             </div>
                             </div>
-                    <div class="">
-                        <button class="button"><span>Contribute</span></button>
-                    </div>
                         </div>
+
+                           <!-- SECOND TAB-->
+
                           <div class="tab-pane" id="tab_default_2">
                             <div class="implement">
+                                <label for="">Your Ether Id:</label>
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Enter The Ether Address" aria-label="Recipient's username" aria-describedby="basic-addon2">
                                 <span class="input-group-addon" id="">ETHER</span>
                             </div>
-                            <div class="input-group input-group-currency" style="margin: 3% 0;">
+                                <label for="">Your Ether Address:</label>
+                            <div class="input-group input-group-currency">
                                 <input type="text" name="amount" class="form-control" value="" placeholder="Enter The your Email Address">
                                 <div class="input-group-btn">
                                     <button type="button" class="btn btn-default dropdown-toggle uppercase dropdown-toggle-big"><b>EMAIL</b>
                                       </button>
                                 </div>
                             </div>
-                        </div>
-                                <button class="button"><span>Next</span></button>
+                                <button class="button contribute-btn"><span>Next</span></button>
 
                             </div>
+                              <div class="note-content">
+                                  <h5>Note:</h5>
+                                  <p>Above given ether address would get token as per the transactions and invoice bill would be sent to the above given mail address.</p>
+                              </div>
+                    </div>
 
+<!--    3 TAB  -->
                         <div class="tab-pane" id="tab_default_3">
-                            <div class="col-sm-12 tab-provide">
+                            <div class="container">
+                            <div class="col-sm-12 tab-provide" style="width: 82%;">
+
                                 <div class="col-sm-6 provide1">
                                     <ol class="provide">
                                         <li>Send The BTC to the provide Address:</li>
                                         <li>Wait few minutes for blockchain conformation and exachage</li>
                                         <li>Recevide exetemated<b>20.2125264747754</b>to address</li>
                                     </ol>
-                                    <h3>For Support Please Contact:aequalis@gmail.com</h3>
-                                </div>
-                                <div class="col-sm-6 qr-img">
-                                    <h3>Invoice No:<b></b></h3>
-                                    <img src="assets/images/QR_code.png" ALT=""><br>
-                                <button type="button" class="btn btn-success">Copied Address</button>
+                                    <h3>For Support Please Contact:<span style="color: #00796B">aequalis@gmail.com</span></h3>
                                     <h5>Transaction status@Waiting for payment</h5>
+                                </div>
+                                <div class="col-sm-6 qr-img" style="text-align: center;">
+                                    <h3 class="invoice">Invoice No:<b></b></h3>
+                                    <img src="https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=ethereum:0x91bEDB659eE36dE892cf0D96c2ccDeBaa5A3AE07
+" ALT=""><br>
+                                    <div class="clearfix">&nbsp;</div>
+
+                                    <button type="button" class="btn btn-success" style="background: #00796b;">Copied Address</button>
+
+                                </div>
+                            </div>
                             </div>
                         </div>
-                        </div>
+
+             <!--    4 TAB  -->
+
                             <div class="tab-pane" id="tab_default_4">
                          <h1>Thank You</h1>
                             </div>
-                    </div>
-                    </div>
-
-                </div>
             </div>
         </div>
-    </div>
+            </div>
+            </div>
+        </div></div>
+
+
 </body>
 </html>
