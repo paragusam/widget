@@ -76,57 +76,6 @@ body{
 .portlet .tabbable-line > .tab-content {
     padding-bottom: 0;
 }
-/*new code-add*/
-.search__wrapper>.search__input {
-    width: 180px;
-    height: 42px;
-    max-height: 42px;
-    padding: 0;
-    margin-right: 10px;
-    margin-left: 10px;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.1;
-    color: #000;
-    text-align: left;
-    border: none!important;
-}
-.input-bg-transparent .input-group-addon, .input-bg-transparent input {
-    background: hsla(0,0%,100%,.15)!important;
-}
-
-.form-exchange input {
-    border-left: none!important;
-    box-shadow: none!important;
-}
-.box__wrapper {
-    position: absolute;
-    /* top: 60px; */
-    z-index: 1000;
-    /* width: 240px; */
-    overflow: hidden;
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 0 10px 2px rgba(0,0,0,.25);
-    margin: 0 45%;
-    overflow-y: scroll;
-    height: 200px;
-
-}
-.item__wrapper>.coin_full, .item__wrapper>.coin_short {
-    height: 30px;
-    font-size: 15px;
-    text-align: left;
-    cursor: pointer;
-}
- .item__wrapper>.coin_short {
-              padding-left: 20px!important;
-              font-weight: 900;
-              color: #000;
-          }
-.search__wrapper {
-    width: 200px;
-}
 .uppercase {
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -215,12 +164,19 @@ label{
     font-size: 11px;
     line-height: 48px;
 }
+a{
+    color: #fff;
+}
+a:hover{
+    text-decoration: none;
+    color: #fff;
+
+}
 #hideshow {
-    margin: 0 58%;
-    height:  161px;
-    overflow-y: scroll;
-   }
-#hideshow::-webkit-scrollbar-track
+    margin: -28% 58%;
+}
+
+/*#hideshow::-webkit-scrollbar-track
 {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     background-color: #F5F5F5;
@@ -235,7 +191,7 @@ label{
 #hideshow::-webkit-scrollbar-thumb
 {
     background-color: #000000;
-}
+}*/
 .note-content{
     margin: 12%;
 }
@@ -245,4 +201,11 @@ label{
 .contribute-btn{
     float: right;
     margin: 2% 0;
+}
+.serch-main{
+    border-bottom: 1px solid rgba(204, 204, 204, 0.71) !important;
+    border: 0px solid;
+    width: 100%;
+    margin: 0;
+    padding: 0 19px;
 }
