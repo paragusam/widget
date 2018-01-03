@@ -3,11 +3,11 @@
 <title>Widget</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="//fonts.googleapis.com/css?family=Snippet" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script>
         $(document).ready(function(){
             $("#next").click(function () {
@@ -25,21 +25,17 @@
             $('#enable').on('click', function() {
                 $('.demo').enable();
             });
+            $(".coin_short").click(function(){
+                console.log(this);
+                var name=$(this).text();
+                //alert(name);
+                $('#content').text(name);
+                $(".coin_short").click(function(){
+                    $("#hideshow").hide();
+                });
+            });
         });
     </script>
-	<script>
-$(document).ready(function(){
-    $(".coin_short").click(function(){
-		console.log(this);
-		var name=$(this).text();
-		//alert(name);
-		$('#content').text(name);
-        $(".coin_short").click(function(){
-            $("#hideshow").hide();
-        });
-    });
-});
-</script>
 </head>
 <body>
 <div class="row header  main-row">
@@ -91,7 +87,7 @@ $(document).ready(function(){
                                         <span class="glyphicon glyphicon-chevron-down" style="color:#00796b"></span></button>
                             </div>
                             </div>
-                            <button class="button contribute-btn" id="contribute"><span><a  href="#tab_default_2" data-toggle="tab">Contribute</a></span></button>
+                            <button class="button contribute-btn" id="contribute"><span><a  href="#tab_default_2" data-toggle="tab" style="color:#fff;">Contribute</a></span></button>
                             <ul class="dropdown-menu" id="hideshow">
                                 <li class="coin_short"><a href="#">BitCoin</a></li>
                                 <li class="coin_short"><a href="#">DashCoin</a></li>
@@ -99,7 +95,8 @@ $(document).ready(function(){
                             </ul>
                         </div>
                         </div>
-<!-- SECOND TAB-->
+
+ <!-- SECOND TAB-->
 
                           <div class="tab-pane" id="tab_default_2">
                             <div class="implement">
@@ -151,16 +148,15 @@ $(document).ready(function(){
                             </div>
                         </div>
 
-<!--    4 TAB  -->
-
-                     <div class="tab-pane" id="tab_default_4">
-                     <h1>Thank You</h1>
-                 </div>
+             <!--    4 TAB  -->
+                            <div class="tab-pane" id="tab_default_4">
+                                <h1>Thank You</h1>
+                            </div>
             </div>
         </div>
       </div>
+     </div>
     </div>
-   </div>
   </div>
 </body>
 </html>
